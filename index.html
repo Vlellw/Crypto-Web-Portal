@@ -1,0 +1,116 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/frappe-charts@1.2.4/dist/frappe-charts.min.iife.js"></script>
+    <title> Money & Crypto Web Portal</title>
+</head>
+
+
+
+<body>
+    <header>
+        <h1>Tracking crypto and its historical data and not only...</h1>    
+        <div class="auth_container">
+            <a href="admin.html" id="link" style="text-decoration: none;">
+                <button class="admin_btn">Admin Login</button>
+            </a>
+            <button id="logout_btn" class="logout_btn_style">Logout</button>
+        </div>
+    </header>
+-
+
+
+    <main>
+        <section class="chart1_box">
+
+            <div class="currecies">
+                <label for="select_cur">Choose currency:</label>
+
+                <select id="select_cur">
+                    <option value="bitcoin">Bitcoin</option>
+                    <option value="dogecoin">Dogecoin</option>
+                    <option value="ethereum">Ethereum</option>
+                </select>
+
+                <select id="period">
+                    <option value="30">30 Days</option>
+                    <option value="90">3 Months</option>
+                    <option value="365">1 Year</option>
+                </select>
+
+                <label for="chart_color">Select color:</label>
+                <input type="color" id="chart_color" value="#7cd69f">
+            </div>
+
+            <div class="btn_group">
+                <button id="download_btn">Download SVG</button>
+                <button id="search_btn">Show Graph</button>
+                <button id="add_chart_btn">Add Capitalization</button>
+            </div>
+
+            <div class="charts_wrapper">
+                <div class="charts" id="charts"></div>
+                <div class="info_panel" style="margin-bottom: 25px;">
+                    <h3>Information about selected point</h3>
+                    <p id="info_about_point">Click on any point on the chart to see details.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="charts" id="charts2" style="display: none;"></div>
+            <p id="charts2_label" class="charts2_label_style">*Capitalization (in Billions $)</p>
+        </section>
+
+
+        <section id="info_box" class="info_panel">
+            <h3>Details</h3>
+            <p id="additional_text">Click on the chart data to see more info.</p>
+        </section>
+
+
+
+        <div id="portfolio_container" class="info_panel">
+            <h3>Crypto Portfolio & Recommendation</h3>
+            <div class="portfolio">
+                <div>
+                    <label for="ex_cur">Currency:</label><br>
+                    <select id="ex_cur">
+                        <option value="bitcoin">Bitcoin</option>
+                        <option value="ethereum">Ethereum</option>
+                        <option value="solana">Solana</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ex_amount">Amount bought:</label><br>
+                    <input type="number" id="ex_amount" placeholder="e.g. 0.5 or 2" class="portfolio_input">
+                </div>
+                <div>
+                    <label for="ex_date">Purchase Date:</label><br>
+                    <input type="date" id="ex_date" class="portfolio_input">
+                </div>
+                <div class="portfolio_btn_wrapper">
+                    <button id="ex_btn">Calculate</button>
+                </div>
+            </div>
+            <p id="ex_result">Enter your purchase details and click Calculate.</p>
+        </div>
+
+        <section class="learning_section" id="learning_container">
+            <h3 id="learning_title">Do You want to learn about crypto?</h3>
+            <div id="learning_content">
+                <button id="yes">Yes!!!</button>
+                <button id="no" class="btn_no_style">No</button>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
