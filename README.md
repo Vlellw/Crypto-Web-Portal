@@ -48,13 +48,12 @@ Money & Crypto Portal is a client-side web application built with vanilla HTML, 
 
 ## Project Structure
 
-`text
-├── index.html          
-├── admin.html          
-├── css/
-│   └── style.css       
-├── js/
-│   ├── api.js        
-│   ├── app.js 
-│   └── admin.js
-└── Project work.pdf
+* **index.html** — Main dashboard containing the chart containers, price comparison details panel, portfolio calculator, and interactive learning section.
+* **admin.html** — Dedicated administrator login page with session passcode validation.
+* **css/**
+  * **style.css** — Dark theme styling, responsive grid/flexbox layouts, typography, and UI controls.
+* **js/**
+  * **api.js** — Asynchronous API requests for CoinGecko, Coinpaprika, and DummyJSON Quotes.
+  * **app.js** — Chart rendering, interactive data point handlers, SVG export, portfolio calculations, and UI state logic.
+  * **admin.js** — Random 3-digit passcode generation, login validation, and URL parameter redirection (?admin=true).
+* **Project work.pdf** — Full academic project report, grading rubric justification, and AI usage declaration.
